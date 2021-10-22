@@ -20,7 +20,7 @@ public class C03_PositiveTestConfigReaderIle extends TestBase {
 
         ConcortHotelPage concortHotelPage =new ConcortHotelPage(driver);
         concortHotelPage.ilkLoginLinki.click();
-        concortHotelPage.usenameKutusu.sendKeys(ConfigReader.getProperty("CHValidUsername"));
+        concortHotelPage.usenameKutusu.sendKeys(ConfigReader.getProperty("CHValidUsarname"));
         concortHotelPage.passwordKutusu.sendKeys(ConfigReader.getProperty("CHValidPassword"));
         concortHotelPage.login.click();
 

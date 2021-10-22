@@ -13,7 +13,7 @@ public class C02_CHNegativeTest extends TestBase {
 //    test data password : manager1!
 //    Degerleri girildiginde sayfaya girilemedigini test et
 @Test
-public void positiveLoginTest(){
+public void negativeLoginTest(){
     driver.navigate().to("https://www.concorthotel.com/");
     ConcortHotelPage concortHotelPage =new ConcortHotelPage(driver);
     concortHotelPage.ilkLoginLinki.click();
