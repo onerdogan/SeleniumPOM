@@ -9,7 +9,7 @@ import utilities.Driver;
 
 public class C02_WebTable {
 
-    @Test
+    @Test(groups = "birinciGrup")
     public void test() throws InterruptedException {
 //        Bir class oluşturun : C02_WebTables
 //● login() metodun oluşturun ve oturum açın.
@@ -41,7 +41,10 @@ public class C02_WebTable {
 
         for(WebElement each: qaConcortPage.forthColumlist){
             System.out.println(each.getText());
-        }
+
+                    }
+        System.out.println("sutun sayisi: "+qaConcortPage.columList.size());
+
 //● https://www.concorthotel.com//admin/HotelRoomAdmin adresine gidin
 
 
@@ -61,6 +64,6 @@ public class C02_WebTable {
 // ○ 4.satirdaki(row) elementleri konsolda yazdırın.
 //
         Thread.sleep(2000);
-Driver.closeDriver();
+//Driver.closeDriver();
     }
 }

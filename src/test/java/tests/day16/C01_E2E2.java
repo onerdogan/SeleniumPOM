@@ -10,7 +10,7 @@ import pages.QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C01E2E2 {
+public class C01_E2E2 {
     @Test
     public void RoomCreateTest() throws InterruptedException {
 
@@ -63,7 +63,7 @@ public class C01E2E2 {
 //        10. OK butonuna tıklayın.
 //        11. Hotel rooms linkine tıklayın.
 //        12. "LIST OF HOTELROOMS" textinin göründüğünü doğrulayın..
-    Driver.closeDriver();
+        //Driver.closeDriver();
 
     }
 

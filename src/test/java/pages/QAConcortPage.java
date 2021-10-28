@@ -1,9 +1,11 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.w3c.dom.html.HTMLInputElement;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -12,6 +14,8 @@ import java.util.List;
 public class QAConcortPage {
 
    public WebDriver driver;
+
+
     public QAConcortPage(){
 
         PageFactory.initElements(Driver.getDriver(),this);
@@ -100,6 +104,9 @@ public class QAConcortPage {
 @FindBy(xpath = "//tbody/tr//td[4]")
 public List<WebElement> forthColumlist;
 
+@FindBy(xpath = "//tbody//tr[1]//td")
+public List<WebElement> columList;
+
 
 
 
@@ -114,4 +121,19 @@ public List<WebElement> forthColumlist;
         qaConcortPage.login.click();
     }
 
+    public String printData(int satir, int sutun) {
+        //ornekteki 3. satir 5. sutun daki element
+        //xpath=//tbody//tr[3]//td[5]
+        String xpath="//tbody//tr["+satir+"]//td["+sutun+"]";
+        //System.out.println(xpath);
+        //satir no: 3, sutun no:5
+        System.out.println("satir; "+satir+" sutun:"+sutun);
+
+        //@Findby notasyonu parametreli tasimadigi icin onceki yontemle locate etcez
+       // WebElement istenenData=Driver.getDriver().findElement(By.xpath(xpath));
+        String istenenData=Driver.getDriver().findElement(By.xpath(xpath)).getText();
+        System.out.println("satir; "+satir+" sutun:"+sutun+"'deki data ; "+istenenData);
+
+        return istenenData;
+    }
 }

@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 import utilities.ConfigReader;
 import utilities.Driver;
 public class C01_DriverClassKullanimi {
-    @Test
+    @Test(groups = "birinciGrup")
     public void test(){
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
         Driver.getDriver().get(ConfigReader.getProperty("facebookUrl"));
