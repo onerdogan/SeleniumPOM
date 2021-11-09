@@ -54,7 +54,7 @@ public class C02_E2ETest {
         System.out.println(qaConcortPage.succesfully.getText());
         Thread.sleep(2000);
         Assert.assertTrue(qaConcortPage.succesfully.isDisplayed());
-        // Driver.getDriver().switchTo().alert().accept();
+
         Thread.sleep(5000);
         qaConcortPage.okButton.click();
 
