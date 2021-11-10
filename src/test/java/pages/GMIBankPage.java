@@ -34,6 +34,29 @@ public class GMIBankPage {
     @FindBy(xpath ="//span[text()='Sign out']" )
     public WebElement signoutButonu;
 
+    @FindBy(xpath = "//*[text()='My Operations']")
+    public WebElement myOperations;
+
+    @FindBy(xpath = "//*[text()='Manage Customers']")
+    public WebElement manageCustomers;
+
+    @FindBy(xpath = "(//*[text()='Edit'])[1]")
+    public WebElement ilkMusteriEdit;
+
+    @FindBy(xpath = "//input[@name='firstName']")
+    public WebElement firstnameElement;
+
+    @FindBy(xpath = "//select[@name='country.id']")
+    public WebElement countruDropdown;
+
+    @FindBy(xpath = "//button[@id='save-entity']")
+    public WebElement editSaveButton;
+
+    @FindBy(xpath = "//tbody//tr[1]//td[2]")
+    public WebElement ilkmusteriName;
+
+    @FindBy(xpath = "//tbody")
+    public WebElement tumBody;
 
 
     public void GMIBanklogin() throws InterruptedException {
