@@ -11,13 +11,13 @@ import utilities.TestBaseRapor;
 public class C02_WindowHandleRaporlu extends TestBaseRapor {
 
     @Test
-    public void test(){
+    public void test() throws InterruptedException {
         extentTest=extentReports.createTest("window handle test","yeni sayfadada New Window test eder");
 
 
         Driver.getDriver().get("https://the-internet.herokuapp.com/windows");
         extentTest.info("istenen adrese gidildi");
-
+Thread.sleep(1000);
         Driver.getDriver().findElement(By.linkText("Click Here")).click();
         extentTest.info("link tiklanti");
 

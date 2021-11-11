@@ -18,8 +18,9 @@ public class C02_WebTable {
 //        4. Username textbox ve password metin kutularını locate edin ve aşağıdaki verileri girin.
 //        a. Username : manager  b. Password  : Manager1!
 //                5. Login butonuna tıklayın.
-
+        Thread.sleep(2000);
         qaConcortPage.management.click();
+        Thread.sleep(2000);
         qaConcortPage.hotelRooms.click();
         for (WebElement each: qaConcortPage.basliklarListesi){
             System.out.println(each.getText());
@@ -27,7 +28,7 @@ public class C02_WebTable {
         System.out.println("sutun sayisi: "+qaConcortPage.basliklarListesi.size());
     Thread.sleep(2000);
         System.out.println(qaConcortPage.tbodyAll.getText());
-        Assert.assertTrue(qaConcortPage.tbodyAll.getText().contains("HAPPY HOTEL"));
+        Assert.assertFalse(qaConcortPage.tbodyAll.getText().contains("HAPPY HOTEL"));
         //eger tum tablo body sini hucrelere ayirmadan tek bir string olarak gormek istersek , tek bir Webelement olarak locate edebiliriz
         // bu string icinde istedigimiz aramayi yapabiliriz
         System.out.println("tablodaki satir sayisi: "+qaConcortPage.rowList.size());

@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="paralel class calistirma" parallel="classes" thread-count="2">
+    <test name="paralel calistirma 1">
+        <classes>
+            <class name="tests.day13.C03_Pages"></class>
+            <class name="tests.day15.C01_DriverClassKullanimi"></class>
+            <class name="tests.smokeTest.negativeTest"></class>
+            <class name="tests.day16.C01_E2E2"></class>
+        </classes>
+    </test>
+</suite>
